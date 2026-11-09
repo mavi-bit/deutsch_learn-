@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f3f5fa; --card: #ffffff; --ink: #0f1a2e; --muted: #5d6a82; --line: #dfe4ef;
+  --brand: #2347d6; --brandsoft: #e4eaff; --gold: #f2b705; --ok: #15803d; --bad: #c2352b;
+}
+.dark {
+  --bg: #0b111d; --card: #131b2c; --ink: #e9eefb; --muted: #93a0ba; --line: #24304a;
+  --brand: #7f9bff; --brandsoft: #1b2850; --gold: #f2c230; --ok: #4ade80; --bad: #f87171;
+}
+body { @apply bg-bg text-ink font-sans antialiased; }
+h1, h2, h3, .font-display { font-family: "Bricolage Grotesque", system-ui, sans-serif; letter-spacing: -0.02em; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.input { @apply w-full rounded-xl border border-line bg-card px-3 py-2.5 text-sm outline-none focus:border-brand; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
